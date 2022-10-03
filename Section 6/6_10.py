@@ -12,15 +12,18 @@
 # Подсказка:
 # Используйте бинарный поиск, а не конкатенацию.
 
-number = int(input('Введите загаданное число: '))
-guess = count = 0
+middle = answer = 0
 low_range = 1
 high_range = 100
-while guess != number:
-    guess = int((low_range + high_range) / 2)
-    if number > guess:
-        low_range = guess
-    if number < guess:
-        high_range = guess
-    count += 1
-print('Число', number, 'угадано за', count, 'попыток.')
+
+while True:
+    middle = int((low_range + high_range) / 2)
+    print('Твоё число равно, меньше или больше, чем число ', middle, '?', sep='')
+    ask = int(input('Введи ответ (1 — равно, 2 — больше, 3 — меньше): '))
+    if ask == 1:
+        print('Загаданное число —', middle)
+        break
+    if ask == 2:
+        low_range = middle
+    if ask == 3:
+        high_range = middle
