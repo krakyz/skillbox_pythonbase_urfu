@@ -34,16 +34,3 @@ if first_half == second_half:
 else:
     print('Увы. Вам не повезло.')
 
-
-
-
-
-
-
-
-
-
-
-
-
-
