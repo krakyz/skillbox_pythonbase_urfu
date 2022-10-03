@@ -24,4 +24,3 @@ if mileage_digit_sum > number:
 else:
     print('Сегодня не сломался')
     print('Пробег:', mileage)
-    
