@@ -16,4 +16,3 @@ for month in range(1, 11):
         else:
             print('Зарплата уменьшилась по сравнению с прошлым месяцем.')
     last_month_wage = current_month_wage
-
