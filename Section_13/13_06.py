@@ -21,6 +21,11 @@ oscillation_count = 0
 amplitude = float(input('Введите начальную амплитуду: '))
 amplitude_stop = float(input('Введите амплитуду остановки: '))
 
+while amplitude_stop >= amplitude:
+    print('\nАмплитуда остановки не может быть больше или равна начальной амплитуды. Введите корректные данные.\n')
+    amplitude = float(input('Введите начальную амплитуду: '))
+    amplitude_stop = float(input('Введите амплитуду остановки: '))
+
 while amplitude > amplitude_stop:
     amplitude *= DAMPING
     oscillation_count += 1
